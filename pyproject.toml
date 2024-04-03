@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "source-splitter"
+version = "0.1.0"
+description = "Splits source files from various languages into component parts"
+authors = ["Robert Lippmann <70883373+rlippmann@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "source_splitter", from = "src"}]
+keywords = ["file splitter", "source code tool", "javascript parser", "typescript parser", "java parser", "C++ parser", "C parser"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: C",
+    "Programming Language :: C++",
+    "Programming Language :: Java",
+    "Programming Language :: JavaScript",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: File Formats",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Libraries",
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+tree-sitter-languages = "^1.10.2"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.5"
+pre-commit = "^3.7.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
